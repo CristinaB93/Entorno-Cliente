@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplos de JavaScript</title>
+    </head>
+    <body>
+        <h1>Ejemplos de JavaScript</h1>
+        <h3>Ejemplo 1: Cambiar contenido HTML</h3>
+        <p id="mensaje">Este es el mensaje original.</p>
+        <button onclick="cambiarMensaje()">Cambiar mensaje</button>
+        <script>
+            function cambiarMensaje() {
+                document.getElementById("mensaje").textContent = 
+                "Este código ha sido cambiado desde JavaScript.";
+            }
+        </script>
+        <h3>Ejemplo 2: Cambiar atributos de objetos</h3>
+        <img id="imagen" src="https://picsum.photos/id/237/300/200" alt="Perro sentado">
+        <p id="descripcion">Imagen original.</p>
+        <button type="button" onclick="cambiarAtributos()">Cambiar imagen y atributos</button>
+        <script>
+            function cambiarAtributos() {
+                const imagen = document.getElementById("imagen");
+                const imagenInicial = "https://picsum.photos/id/237/300/200";
+                const imagenAlternativa = "https://picsum.photos/id/1025/300/200";
+                const mostrandoImagenInicial = imagen.getAttribute("src") === imagenInicial;
+                if (mostrandoImagenInicial) {
+                    imagen.setAttribute("src", imagenAlternativa);
+                    imagen.setAttribute("alt", "Perro corriendo");
+                    document.getElementById("descripcion").textContent = "Ahora se muestra la imagen ALTERNATIVA.";
+
+                } else {
+                    imagen.setAttribute("src", imagenInicial);
+                    imagen.setAttribute("alt", "Perro sentado");
+                    document.getElementById("descripcion").textContent = "Ahora se muestra la imagen ORIGINAL.";
+                }
+            }
+        </script>
+    </body>
+</html>
