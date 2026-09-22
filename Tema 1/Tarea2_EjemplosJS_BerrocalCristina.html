@@ -1,41 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ejemplos de JavaScript</title>
-    </head>
-    <body>
-        <h1>Ejemplos de JavaScript</h1>
-        <h3>Ejemplo 1: Cambiar contenido HTML</h3>
-        <p id="mensaje">Este es el mensaje original.</p>
-        <button onclick="cambiarMensaje()">Cambiar mensaje</button>
-        <script>
-            function cambiarMensaje() {
-                document.getElementById("mensaje").textContent = 
-                "Este código ha sido cambiado desde JavaScript.";
-            }
-        </script>
-        <h3>Ejemplo 2: Cambiar atributos de objetos</h3>
-        <img id="imagen" src="https://picsum.photos/id/237/300/200" alt="Perro sentado">
-        <p id="descripcion">Imagen original.</p>
-        <button type="button" onclick="cambiarAtributos()">Cambiar imagen y atributos</button>
-        <script>
-            function cambiarAtributos() {
-                const imagen = document.getElementById("imagen");
-                const imagenInicial = "https://picsum.photos/id/237/300/200";
-                const imagenAlternativa = "https://picsum.photos/id/1025/300/200";
-                const mostrandoImagenInicial = imagen.getAttribute("src") === imagenInicial;
-                if (mostrandoImagenInicial) {
-                    imagen.setAttribute("src", imagenAlternativa);
-                    imagen.setAttribute("alt", "Perro corriendo");
-                    document.getElementById("descripcion").textContent = "Ahora se muestra la imagen ALTERNATIVA.";
 
-                } else {
-                    imagen.setAttribute("src", imagenInicial);
-                    imagen.setAttribute("alt", "Perro sentado");
-                    document.getElementById("descripcion").textContent = "Ahora se muestra la imagen ORIGINAL.";
-                }
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos de JavaScript</title>
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+        }
+        h1 {
+            color: rgb(180, 0, 147);
+        }
+        h3 {
+            color: rgb(252, 71, 161);
+        }
+        button {
+            background-color: rgb(252, 71, 161);
+            font-weight: bold;
+        }
+        #texto.estilo-alternativo {
+            color: white;
+            background-color: rgb(180, 0, 147);
+            font-size: 1.4rem;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplos de JavaScript</h1>
+    <h3>Ejemplo 1: Cambiar contenido HTML</h3>
+    <p id="mensaje">Este es el mensaje original.</p>
+    <button onclick="cambiarMensaje()">Cambiar mensaje</button>
+    <script>
+        function cambiarMensaje() {
+            document.getElementById("mensaje").textContent =
+                "Este código ha sido cambiado desde JavaScript.";
+        }
+    </script>
+    <h3>Ejemplo 2: Cambiar atributos de objetos</h3>
+    <img id="imagen" src="https://picsum.photos/id/237/300/200" alt="Perro sentado">
+    <p id="descripcion">Imagen original.</p>
+    <button type="button" onclick="cambiarAtributos()">Cambiar imagen y atributos</button>
+    <script>
+        function cambiarAtributos() {
+            const imagen = document.getElementById("imagen");
+            const imagenInicial = "https://picsum.photos/id/237/300/200";
+            const imagenAlternativa = "https://picsum.photos/id/1025/300/200";
+            const mostrandoImagenInicial = imagen.getAttribute("src") === imagenInicial;
+            if (mostrandoImagenInicial) {
+                imagen.setAttribute("src", imagenAlternativa);
+                imagen.setAttribute("alt", "Perro corriendo");
+                document.getElementById("descripcion").textContent = "Ahora se muestra la imagen ALTERNATIVA.";
+
+            } else {
+                imagen.setAttribute("src", imagenInicial);
+                imagen.setAttribute("alt", "Perro sentado");
+                document.getElementById("descripcion").textContent = "Ahora se muestra la imagen ORIGINAL.";
             }
-        </script>
-    </body>
+        }
+    </script>
+    <h3>Ejemplo 3: Cambiar estilos CSS</h3>
+    <p id="texto">Este párrafo tiene el estilo original.</p>
+    <button type="button" onclick="cambiarEstilo()">Cambiar estilo</button>
+    <script>
+        function cambiarEstilo() {
+            const texto = document.getElementById("texto");
+            if (texto.classList.contains("estilo-alternativo")) {
+                texto.classList.remove("estilo-alternativo");
+                texto.textContent = "Este párrafo tiene el estilo original.";
+            } else {
+                texto.classList.add("estilo-alternativo");
+                texto.textContent = "Este es el texto y el estilo alternativos.";
+            }
+        }
+    </script>
+    <h3>Ejemplo 4: Mensaje por consola</h3>
+    <button type="button" onclick="mostrarMensaje()">Mostrar mensaje</button>
+    <script>
+        function mostrarMensaje() {
+            console.log("Este mensaje se muestra en la consola del navegador.");
+        }
+    </script>
+    <h3>Ejemplo 5: Mensaje en un párrafo vacío</h3>
+    <p id="parrafo-vacio"></p>
+    <button type="button" onclick="mostrarMensajeEnParrafo()">Mostrar mensaje en el párrafo</button>
+    <script>
+        function mostrarMensajeEnParrafo() {
+            document.getElementById("parrafo-vacio").textContent =
+                "Este mensaje se muestra en el párrafo vacío.";
+        }
+    </script>
+    <h3>Ejemplo 6: Escribir párrafos nuevos en HTML</h3>
+    <button id="botonParrafos" type="button" onclick="escribirParrafos()">Escribir párrafos</button>
+    <div id="contenedor"></div>
+    <script>
+        function escribirParrafos() {
+            const boton = document.getElementById("botonParrafos");
+            document.write("<p>Este es el primer párrafo escrito desde JavaScript.</p>");
+            document.write("<p>Este es el segundo párrafo escrito en el HTML.</p>");
+            boton.disabled = true;
+        }
+    </script>
+    <h3>Ejemplo 7: Mostrar un mensaje con alert</h3>
+    <button id="botonAlerta" type="button" onclick="mostrarAlerta()">Mostrar alerta</button>
+    <script>
+        function mostrarAlerta() {
+            const boton2 = document.getElementById("botonAlerta");
+            alert("Este es un mensaje de alerta.");
+            boton2.disabled = true;
+        }
+    </script>
+</body>
+
 </html>
