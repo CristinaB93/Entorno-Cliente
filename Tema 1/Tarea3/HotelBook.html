@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HotelBook - Buscador de hoteles</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="funciones.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>HOTELBOOK</h1>
+    </header>
+
+    <main>
+        <div id="presentacion">
+            <h3 id="titulo">Encuentra tu hotel ideal al mejor precio</h3>
+            <p id="texto">Comparamos miles de alojamientos en segundos para que reserves la estancia perfecta según tu
+                presupuesto y estilo de viaje. Filtra por ubicación, comodidades y opiniones reales, sin comisiones ocultas.
+                Tu próxima escapada empieza aquí.</p>
+                <button onclick="cambiarMensaje()">Ver oferta destacada</button>
+        </div>
+
+        <div id="comparador">
+            <h3>Compara habitaciones en Barcelona</h3>
+            <div id="habitaciones">
+                <img id="imagen" src="https://images.pexels.com/photos/37658584/pexels-photo-37658584.jpeg"
+                    alt="Habitación doble azul">
+                <div class="info-habitacion">
+                    <p id="descripcion">Habitación doble, camas twins, en Hotel Playa Marina.</p>
+                    <p id="descripcion2">Ubicado a pocos pasos del litoral barcelonés, 
+                        el Hotel Playa Marina es un acogedor alojamiento de estilo mediterráneo y fresco que combina 
+                        el ambiente relajado de la costa con la comodidad de estar perfectamente conectado con el centro de la ciudad. 
+                        Sus estancias luminosas y de tonos marinos ofrecen el espacio ideal para descansar, 
+                        contando con habitaciones confortables, equipadas con Wi-Fi y aire acondicionado, 
+                        pensadas tanto para escapadas en pareja como para viajes de negocios que buscan disfrutar del mar 
+                        sin renunciar a la oferta cultural de Barcelona.</p>
+                    <p id="precio">Desde 51€/noche</p>
+                    <button onclick="cambiarAlojamiento()">Ver otro alojamiento</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="reserva">
+            <h3>Reserva tu habitación en un par de clics</h3>
+            <p id="textoReserva">Selecciona tus fechas, elige la habitación que mejor se adapte a ti y asegura tu viaje
+                al mejor precio garantizado.
+                Sin comisiones ocultas y con cancelación flexible en alojamientos seleccionados.</p>
+            <div id="cancelacion">
+                <h4>Condiciones de cancelación de HotelBook</h4>
+                <p>Cancela gratis hasta 24 horas antes de tu fecha de entrada (check-in).
+                    Si cancelas después de este plazo o no te presentas, se aplicará el cargo de la primera noche de
+                    estancia.
+                    Las tarifas no reembolsables señaladas durante la reserva no admiten cambios ni devoluciones.</p>
+                <button onclick="cambiarEstilo()">Destacar condiciones</button>
+            </div>
+        </div>
+
+        <div id="consultas">
+            <h3>Consultas</h3>
+            <p>Realice una consulta sobre el alojamiento que quiere reservar y nos pondremos en contacto con usted en el
+                menor tiempo posible.</p>
+            <p id="estado-consulta"></p>
+            <button id="b1" onclick="mensajeConsola()">Registrar consulta</button>
+            <button id="b2" onclick="mensajeUsuario()">Mostrar estado</button>
+        </div>
+        
+        <div id="reservas">
+            <h3>Reservas</h3>
+            <p id="alojamiento"></p>
+            <p id="estado"></p>
+            <button id="b3" onclick="mensajePreparar()">Preparar reserva</button>
+            <button id="b4" onclick="mensajeConfirmar()">Confirmar reserva</button>
+        </div>
+    </main>
+</body>
