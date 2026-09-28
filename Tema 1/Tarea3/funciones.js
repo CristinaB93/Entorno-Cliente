@@ -14,7 +14,7 @@ function cambiarAlojamiento() {
         foto.setAttribute("src", habitacion2);
         foto.setAttribute("alt", "Habitación doble de una cama hotel urbano");
         document.getElementById("descripcion").textContent =
-            "Habitación deoble de una sola cama en Hotel Urban BCN.";
+            "Habitación doble de una sola cama en Hotel Urban BCN.";
             document.getElementById("descripcion2").textContent =
             "Situado en el corazón de la capital catalana, el Hotel Urban Barcelona destaca por su diseño vanguardista de estética industrial, combinando estructuras metálicas, acabados en hormigón visto y detalles de iluminación cálida. Su concepto moderno e innovador lo convierte en el refugio perfecto para viajeros cosmopolitas y nómadas digitales que buscan una estancia sofisticada con personalidad propia, ofreciendo habitaciones completamente equipadas, espacios de trabajo tipo coworking y un ambiente dinámico a un paso de los principales ejes culturales y de ocio de la ciudad."
             document.getElementById("precio").textContent =
