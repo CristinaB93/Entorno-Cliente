@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio JS</title>
+    <!--En este apartado cargamos el archivo JavaScript, lo que hace que se ejecute el JS al terminar de
+    cargarse. Nos salta un error en la consola, pues este JS hace referencia a elementos del HTML que aún
+    no se han cargado. Para evitar este error, se escribe el atributo "defer", y de esta manera, primero carga todo el HTML
+    y luego ya ejecute el JS. Otra manera de evitar este error sería escribir esta línea donde llamamos al archivo JS al final del body,
+    actuando entonces de la misma manera que con el atributo defer, porque carga primero el HTML y después el JS.-->
+    <script src="JS/app.js"></script>
+    <!--En este apartado, cargamos el archivo JavaScript de forma asíncrona,
+    lo que permite cargar el archivo simultáneamente a la carga del archivo HTML.
+    Una vez cargado el JS se ejecuta. En este ejemplo, no tenemos ningún mensaje de error en la consola,
+    pues el JS no hace referencia a ningún elemento del HTML, y no importa cuál de los dos cargue antes.-->
+    <script async src="JS/segundo.js"></script> 
+</head> 
+
+<body> 
+    <h1 id="mensaje">Esperando a JavaScript...</h1> 
+    <p>Abre la consola del navegador para comprobar la ejecución.</p> 
+    <noscript>Esta página necesita JavaScript.</noscript> 
+</body>  
+
+</html>
