@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2</title>
+</head>
+<body>
+    <script>
+        let a = "12";
+        let b = 7;
+        let c = true;
+
+        // Como la variable a es un string, al sumarla con b, aunque sea un número, 
+        // el resultado será un string concatenado.
+        console.log({expresion: 'a + b', resultado: a + b, tipo: typeof (a + b)});
+        // Al utilizar el operador + antes de una variable string, se convierte en un número, 
+        // por lo que el resultado es la suma de los valores numéricos.
+        console.log({expresion: '+a +b', resultado: +a + b, tipo: typeof (+a + b)});
+        // La expresión buleana de un string no vacío es true.
+        console.log({expresion: 'Boolean(a)', resultado: Boolean(a), tipo: typeof (Boolean(a))});
+        // Al convertir un string que representa un número a tipo Number, se obtiene el valor numérico.
+        console.log({expresion: 'Number(a)', resultado: Number(a), tipo: typeof (Number(a))});
+        // Al sumar un booleano con un número, el booleano se convierte a 1 si es true o a 0 si es false,
+        // por lo que el resultado es la suma de los valores numéricos.
+        console.log({expresion: 'c + b', resultado: c + b, tipo: typeof (c + b)});
+        // Al comparar un string con un número, el string se convierte a número para realizar la comparación.
+        console.log({expresion: 'a === 12', resultado: a === 12, tipo: typeof (a === 12)});
+    </script>
+    <script>
+        // Como en el ejemplo anterior, al sumar un string con un número,
+        // el resultado será un string concatenado.
+        console.log({expression: '"5" + 2', result: "5" + 2, type: typeof ("5" + 2)});
+        // En cambio, al restar un número de un string que representa un número,
+        // el string se convierte a número y se realiza la operación de resta.
+        console.log({expresion: '"5" - 2', resultado: "5" - 2, tipo: typeof ("5" - 2)});
+        // Al comparar un nulo con un undefined, ambos son considerados iguales en valor, por eso,
+        // al compararlo con == da true.
+        console.log({expresion: 'null == undefined', resultado: null == undefined, tipo: typeof (null == undefined)});
+        // Sin embargo, al compararlos con ===, se compara tanto el valor como el tipo,
+        // y como son de tipos diferentes, el resultado es false.
+        console.log({expresion: 'null === undefined', resultado: null === undefined, tipo: typeof (null === undefined)});
+        // Al convertir un string vacío a tipo booleano, el resultado es false.
+        console.log({expresion: 'Boolean("")', resultado: Boolean(""), tipo: typeof (Boolean(""))});
+        //En cambio, al convertir un string con contenido, el resuktado es true.
+        console.log({expresion: 'Boolean("0")', resultado: Boolean("0"), tipo: typeof (Boolean("0"))});
+        // Al convertir un string vacío a tipo Number, el resultado es 0.
+        console.log({expresion: 'Number("")', resultado: Number(""), tipo: typeof (Number(""))});
+        // El resultado de typeof NaN es "number", lo cual al hacer el typeof del typeof, el resultado es "string".
+        console.log({expresion: 'typeof NaN', resultado: typeof NaN, tipo: typeof (typeof NaN)});
+        // Al comparar NaN con NaN, el resultado es false, ya que NaN no es igual a ningún valor, ni siquiera a sí mismo.
+        console.log({expresion: 'NaN === NaN', resultado: NaN === NaN, tipo: typeof (NaN === NaN)});
+        // Al igual que en Java, al sumar números decimales, hay errores de precisión porque,
+        // al representarlos en binario, algunos números decimales no se pueden representar exactamente,
+        // lo que provoca que el resultado de la suma no sea exactamente el esperado.
+        // Se pueden usar algunas funciones para redondear el resultado.
+        console.log({expresion: '0.1 + 0.2', resultado: 0.1 + 0.2, tipo: typeof (0.1 + 0.2)});
+    </script>
+</body>
+</html>
